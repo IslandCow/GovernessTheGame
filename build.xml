@@ -10,7 +10,7 @@
     <property name="man" value="res/Man/" />
 	<property name="child" value="res/Child/" />
 	
-	<property name="bin" value="bin/com/kautown/governess" />
+	<property name="bin" value="bin/com/kautown/governess/" />
 	
     <!-- copy file -->
 	<copy todir="${bin}">
