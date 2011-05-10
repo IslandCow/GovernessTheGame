@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GovernessTheGame" default="" basedir=".">
+    <description>
+		Ant Build File
+    </description>    
+    
+	<property name="res" value="res/" />
+	
+    <property name="claire" value="res/Claire/" />
+    <property name="man" value="res/Man/" />
+	<property name="child" value="res/Child/" />
+	
+	<property name="bin" value="bin/com/kautown/governess" />
+	
+    <!-- copy file -->
+	<copy todir="${bin}">
+    	<fileset dir="${res}"/>
+	</copy>
+	
+    <echo message="Claire has been copied" />
+</project>
