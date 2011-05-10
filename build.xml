@@ -9,6 +9,7 @@
     <property name="claire" value="res/Claire/" />
     <property name="man" value="res/Man/" />
 	<property name="child" value="res/Child/" />
+	<property name="other" value="res/Other/" />
 	
 	<property name="bin" value="bin/com/kautown/governess/" />
 	

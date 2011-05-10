@@ -24,7 +24,7 @@ public class Governess extends JGEngine{
 	
 	@Override
 	public void initCanvas() {
-		setCanvasSettings(20, 15, 32, 32, JGColor.white, JGColor.black, new JGFont("Plain", JGFont.PLAIN, 10.0));
+		setCanvasSettings(20, 15, 32, 32, JGColor.white, JGColor.blue, new JGFont("Plain", JGFont.PLAIN, 10.0));
 	}
 
 	@Override
@@ -37,6 +37,8 @@ public class Governess extends JGEngine{
 		defineImage("CW2L", "p", 0, "Claire/Walk2.png", "x");
 		defineImage("CW3L", "p", 0, "Claire/Walk3.png", "x");
 		
+		defineImage("Notes", "p", 0, "Other/Charm.png", "");
+		
 		defineAnimation("ClaireR",new String[]{"CW1R", "CW2R", "CW3R", "CW2R"}, 0.2);
 		defineAnimation("ClaireSR",new String[]{"CW2R"}, 0.2);
 		defineAnimation("ClaireSL",new String[]{"CW2R"}, 0.2);
@@ -44,7 +46,8 @@ public class Governess extends JGEngine{
 		
 		setFrameRate(40, 10);
 		setGameState("InGame");
-		new Player("ClaireS", true, 80, 400, 42, "Claire", this);
+		new Player(80, 400, this);
+		//new Notes(80, 380, true, this);
 	}
 	
 	public void doFrameInGame() {

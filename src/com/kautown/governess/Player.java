@@ -6,8 +6,7 @@ import jgame.jre.platform.JGEngine;
 public class Player extends jgame.base.JGObject {	
 	private final double STEP = 1.5;
 	
-	public Player(String name, boolean uniqueId, double xPos, double yPos,
-			int collisionid, String gfxname, JGEngine engine) {
+	public Player(double xPos, double yPos, JGEngine engine) {
 		super("Claire", false, xPos, yPos, 0, "Claire");
 		eng = engine;
 	}
@@ -33,6 +32,13 @@ public class Player extends jgame.base.JGObject {
 			else {
 				setAnim("ClaireSL");
 			}
+		}
+		
+		if (eng.getKey(' ')) {
+			if (eng.countObjects("note", 0) < 3){
+				new Notes(x, y-10, goingRight, eng);
+			}
+			eng.clearKey(' ');
 		}
 		return;
 	}
